@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ZEDY REAL ESTATE</string>
+    <string name="action_settings">الإعدادات</string>
+    <string name="action_sign_in">تسجيل الدخول أو انشأ حساب</string>
+    <string name="action_sign_in_short">تسجيل الدخول</string>
+    <string name="error_field_required">هذا الحقل مطلوب</string>
+    <string name="error_incorrect_password">هذا الرمز خاطئ</string>
+    <string name="error_invalid_email">عنوان بريد غير صالح</string>
+    <string name="error_invalid_password">الرمز أقل من 6 خانات</string>
+    <string name="prompt_email">أسم المستخدم</string>
+    <string name="prompt_password">رمز الدخول</string>
+    <string name="title_activity_login">تسجيل الدخول</string>
+</resources>
