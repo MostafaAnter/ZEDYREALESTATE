@@ -6,9 +6,12 @@
     <string name="action_sign_in_short">Sign in</string>
     <string name="error_field_required">This field is required</string>
     <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_email">This user name is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
     <string name="prompt_email">User Name</string>
     <string name="prompt_password">Password</string>
     <string name="title_activity_login">Sign in</string>
+    <string name="there_is_no_Inter_net">There is no network connection!</string>
+    <string name="error">Error!</string>
+    <string name="invalid_email_and_password">Invalid email or password</string>
 </resources>

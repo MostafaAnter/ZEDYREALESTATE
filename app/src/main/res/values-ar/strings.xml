@@ -6,7 +6,7 @@
     <string name="action_sign_in_short">تسجيل الدخول</string>
     <string name="error_field_required">هذا الحقل مطلوب</string>
     <string name="error_incorrect_password">هذا الرمز خاطئ</string>
-    <string name="error_invalid_email">عنوان بريد غير صالح</string>
+    <string name="error_invalid_email">أسم مستخدم غير صالح</string>
     <string name="error_invalid_password">الرمز أقل من 6 خانات</string>
     <string name="prompt_email">أسم المستخدم</string>
     <string name="prompt_password">رمز الدخول</string>

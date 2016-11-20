@@ -8,16 +8,19 @@
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
-    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_email">This user name is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
     <string name="permission_rationale" translatable="false">"Contacts permissions are needed for providing email
         completions."
     </string>
-    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_home" translatable="false">HomeActivity</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="title_activity_about_us">AboutUsActivity</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="title_activity_about_us" translatable="false">AboutUsActivity</string>
+    <string name="there_is_no_Inter_net">There is no network connection!</string>
+    <string name="error">Error!</string>
+    <string name="invalid_email_and_password">Invalid email or password</string>
 </resources>
