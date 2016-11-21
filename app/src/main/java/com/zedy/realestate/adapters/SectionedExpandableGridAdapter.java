@@ -1,6 +1,7 @@
 package com.zedy.realestate.adapters;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -62,10 +63,13 @@ public class SectionedExpandableGridAdapter extends RecyclerView.Adapter<Section
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+        Typeface fontBold = Typeface.createFromAsset(mContext.getAssets(), "fonts/bold.ttf");
+        Typeface font = Typeface.createFromAsset(mContext.getAssets(), "fonts/normal.ttf");
         switch (holder.viewType) {
             case VIEW_TYPE_ITEM :
                 final Item item = (Item) mDataArrayList.get(position);
                 holder.itemTextView.setText(item.getName());
+                holder.itemTextView.setTypeface(font);
                 holder.view.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -76,6 +80,7 @@ public class SectionedExpandableGridAdapter extends RecyclerView.Adapter<Section
             case VIEW_TYPE_SECTION :
                 final Section section = (Section) mDataArrayList.get(position);
                 holder.sectionTextView.setText(section.getName());
+                holder.sectionTextView.setTypeface(fontBold);
                 holder.sectionTextView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
