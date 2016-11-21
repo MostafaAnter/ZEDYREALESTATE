@@ -11,4 +11,14 @@
     <string name="prompt_email">أسم المستخدم</string>
     <string name="prompt_password">رمز الدخول</string>
     <string name="title_activity_login">تسجيل الدخول</string>
+    <string name="about_us">من نحن</string>
+    <string name="communicate">التواصل</string>
+    <string name="error">خطأ!</string>
+    <string name="invalid_email_and_password">بريد أو رمز مرور غير صالح</string>
+    <string name="language">اللغة</string>
+    <string name="language_arabic">عربي</string>
+    <string name="language_en">إنجليزى</string>
+    <string name="share">مشاركة</string>
+    <string name="tasks">مهامي</string>
+    <string name="there_is_no_Inter_net">لايوجد أتصال بالانترنت</string>
 </resources>

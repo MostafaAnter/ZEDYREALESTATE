@@ -23,4 +23,11 @@
     <string name="there_is_no_Inter_net">There is no network connection!</string>
     <string name="error">Error!</string>
     <string name="invalid_email_and_password">Invalid email or password</string>
+    <string name="tasks">Tasks</string>
+    <string name="about_us">About us</string>
+    <string name="share">Share</string>
+    <string name="communicate">Communicate</string>
+    <string name="language">Language</string>
+    <string name="language_arabic">Arabic</string>
+    <string name="language_en">English</string>
 </resources>
