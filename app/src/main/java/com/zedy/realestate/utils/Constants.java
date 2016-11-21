@@ -16,6 +16,7 @@ public class Constants {
      * realEstate api
      */
     public static final String userId = "userId";
+    public static final String token = "nuwP/x5KQ68P1Uhj2ex/UQY";
     public static final String userLastLocationLat = "userLastLocationLat";
     public static final String userLastLocationLng = "userLastLocationLng";
 

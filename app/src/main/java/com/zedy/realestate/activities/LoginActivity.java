@@ -3,6 +3,7 @@ package com.zedy.realestate.activities;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -20,11 +21,12 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.zedy.realestate.BuildConfig;
 import com.zedy.realestate.R;
 import com.zedy.realestate.app.AppController;
+import com.zedy.realestate.store.RealEstatePrefStore;
+import com.zedy.realestate.utils.Constants;
 import com.zedy.realestate.utils.SweetDialogHelper;
 import com.zedy.realestate.utils.Utils;
 
@@ -188,12 +190,18 @@ public class LoginActivity extends LocalizationActivity {
                             try {
                                 jsonObject = new JSONObject(response);
                                 String error = jsonObject.optString("error");
+                                String id = jsonObject.optString("id");
 
                                 if (error.equalsIgnoreCase("true")){
                                     mEmailView.setError(getString(R.string.invalid_email_and_password));
 
                                 }else {
                                     // save id and go to home
+                                    new RealEstatePrefStore(LoginActivity.this)
+                                            .addPreference(Constants.userId, id);
+                                    startActivity(new Intent(LoginActivity.this, HomeActivity.class)
+                                            .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
+                                    overridePendingTransition(R.anim.push_up_enter, R.anim.push_up_exit);
                                 }
                             } catch (JSONException e) {
                                 e.printStackTrace();
