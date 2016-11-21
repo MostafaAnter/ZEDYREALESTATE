@@ -6,6 +6,10 @@
             android:id="@+id/translation"
             android:icon="@drawable/ic_translate_black_24dp"
             android:title="@string/language" />
+        <item
+            android:id="@+id/log_out"
+            android:icon="@drawable/ic_directions_run_black_24dp"
+            android:title="@string/exit" />
     </group>
 
     <item android:title="@string/communicate">

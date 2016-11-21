@@ -131,6 +131,11 @@ public class HomeActivity extends LocalizationActivity
         } else if (id == R.id.about_us) {
             startActivity(new Intent(this, AboutUsActivity.class));
             overridePendingTransition(R.anim.push_up_enter, R.anim.push_up_exit);
+        } else if (id == R.id.log_out) {
+            new RealEstatePrefStore(this).clearPreference();
+            startActivity(new Intent(this, SplashActivity.class)
+                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
+            overridePendingTransition(R.anim.push_up_enter, R.anim.push_up_exit);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
