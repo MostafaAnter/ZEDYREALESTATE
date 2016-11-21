@@ -30,7 +30,7 @@ public class SplashActivity extends LocalizationActivity {
         setDefaultLanguage("en");
 
         if (checkFirstTimeOpenApp() == 0) {
-            setLanguage(Locale.getDefault().getLanguage());
+            setLanguage("ar");
         } else {
             if (new RealEstatePrefStore(this).getIntPreferenceValue(Constants.PREFERENCE_LANGUAGE) == 4) {
                 setLanguage("ar");

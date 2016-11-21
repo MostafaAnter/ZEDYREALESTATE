@@ -9,8 +9,16 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/background"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.zedy.realestate.activities.AboutUsActivity"
     tools:showIn="@layout/activity_about_us">
+
+    <ImageView
+        android:id="@+id/splash_logo"
+        android:contentDescription="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
