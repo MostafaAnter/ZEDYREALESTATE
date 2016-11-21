@@ -64,9 +64,10 @@ public class SectionedExpandableLayoutHelper implements SectionStateChangeListen
         mSectionDataMap.get(mSectionMap.get(section)).remove(item);
     }
 
-    public void removeSection(String section) {
-        mSectionDataMap.remove(mSectionMap.get(section));
-        mSectionMap.remove(section);
+    public void removeAllSection() {
+        mSectionDataMap.clear();
+        mSectionMap.clear();
+        mSectionedExpandableGridAdapter.notifyDataSetChanged();
     }
 
     private void generateDataList () {
