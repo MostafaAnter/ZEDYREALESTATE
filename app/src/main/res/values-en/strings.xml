@@ -13,7 +13,7 @@
     <string name="title_activity_login">Sign in</string>
     <string name="there_is_no_Inter_net">There is no network connection!</string>
     <string name="error">Error!</string>
-    <string name="invalid_email_and_password">Invalid email or password</string>
+    <string name="invalid_email_and_password">Invalid user name or password</string>
     <string name="tasks">Tasks</string>
     <string name="about_us">About us</string>
     <string name="share">Share</string>
@@ -32,8 +32,8 @@
     <string name="try_again">Try again!</string>
     <string name="loading">Loading...</string>
     <string name="confirm">Confirm!</string>
-    <string name="are_you_confirm">Are you confirm finishig task</string>
+    <string name="are_you_confirm">Confirm</string>
     <string name="ok">Ok</string>
     <string name="done">Done!</string>
-    <string name="message_done">You task done success, plz reload page</string>
+    <string name="message_done">You task done success</string>
 </resources>

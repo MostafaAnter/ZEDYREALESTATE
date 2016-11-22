@@ -14,7 +14,7 @@
     <string name="about_us">من نحن</string>
     <string name="communicate">التواصل</string>
     <string name="error">خطأ!</string>
-    <string name="invalid_email_and_password">بريد أو رمز مرور غير صالح</string>
+    <string name="invalid_email_and_password">أسم مستخدم أو رمز مرور غير صالح</string>
     <string name="language">اللغة</string>
     <string name="language_arabic">عربي</string>
     <string name="language_en">إنجليزى</string>
@@ -29,7 +29,7 @@
     <string name="confirm">تأكيد</string>
     <string name="done">تم!</string>
     <string name="loading">جارى التحميل...</string>
-    <string name="message_done">تمة المهمة بنجاح, أعد تحميل المهام</string>
+    <string name="message_done">تمت المهمة بنجاح</string>
     <string name="ok">نعم</string>
     <string name="open_gps">فتح ال GPS!</string>
     <string name="time_out">الوقت انتهي!</string>

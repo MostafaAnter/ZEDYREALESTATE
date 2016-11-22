@@ -55,4 +55,6 @@ dependencies {
     compile 'com.google.android.gms:play-services-location:9.8.0'
     // get current location
     compile 'com.github.quentin7b:android-location-tracker:3.2'
+    // event bus
+    compile 'org.greenrobot:eventbus:3.0.0'
 }

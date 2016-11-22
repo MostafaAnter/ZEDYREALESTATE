@@ -38,6 +38,7 @@ import com.zedy.realestate.adapters.ItemClickListener;
 import com.zedy.realestate.adapters.Section;
 import com.zedy.realestate.adapters.SectionedExpandableLayoutHelper;
 import com.zedy.realestate.app.AppController;
+import com.zedy.realestate.events.ReloadEvent;
 import com.zedy.realestate.jsonParser.Parse;
 import com.zedy.realestate.models.Item;
 import com.zedy.realestate.models.Task;
@@ -48,6 +49,8 @@ import com.zedy.realestate.utils.SweetDialogHelper;
 import com.zedy.realestate.utils.Utils;
 
 import org.apache.commons.lang.StringEscapeUtils;
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -353,5 +356,22 @@ public class HomeActivity extends LocalizationActivity
         sectionedExpandableLayoutHelper.notifyDataSetChanged();
 
 
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        EventBus.getDefault().register(this);
+    }
+
+    @Override
+    public void onStop() {
+        EventBus.getDefault().unregister(this);
+        super.onStop();
+    }
+
+    @Subscribe
+    public void onMessageEvent(ReloadEvent event) {
+        initiateRefresh();
     }
 }

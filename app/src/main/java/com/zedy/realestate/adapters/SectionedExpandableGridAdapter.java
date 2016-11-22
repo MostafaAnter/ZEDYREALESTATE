@@ -30,12 +30,14 @@ import com.zedy.realestate.R;
 import com.zedy.realestate.activities.HomeActivity;
 import com.zedy.realestate.activities.LoginActivity;
 import com.zedy.realestate.app.AppController;
+import com.zedy.realestate.events.ReloadEvent;
 import com.zedy.realestate.models.Item;
 import com.zedy.realestate.store.RealEstatePrefStore;
 import com.zedy.realestate.utils.Constants;
 import com.zedy.realestate.utils.SweetDialogHelper;
 import com.zedy.realestate.utils.Utils;
 
+import org.greenrobot.eventbus.EventBus;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -255,6 +257,8 @@ public class SectionedExpandableGridAdapter extends RecyclerView.Adapter<Section
                             new SweetDialogHelper((FragmentActivity) mContext)
                                     .showSuccessfulMessage(mContext.getString(R.string.done)
                                     , mContext.getString(R.string.message_done));
+
+                            EventBus.getDefault().post(new ReloadEvent());
 
                         }
                     }, new Response.ErrorListener() {

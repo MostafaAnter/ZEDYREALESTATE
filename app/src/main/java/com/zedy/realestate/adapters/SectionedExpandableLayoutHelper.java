@@ -68,6 +68,7 @@ public class SectionedExpandableLayoutHelper implements SectionStateChangeListen
         mSectionDataMap.clear();
         mSectionMap.clear();
         mSectionedExpandableGridAdapter.notifyDataSetChanged();
+        mSectionedExpandableGridAdapter.notifyItemRangeRemoved(0, mSectionMap.size());
     }
 
     private void generateDataList () {

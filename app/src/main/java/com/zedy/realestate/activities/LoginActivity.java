@@ -193,7 +193,8 @@ public class LoginActivity extends LocalizationActivity {
                                 String id = jsonObject.optString("id");
 
                                 if (error.equalsIgnoreCase("true")){
-                                    mEmailView.setError(getString(R.string.invalid_email_and_password));
+                                    new SweetDialogHelper(LoginActivity.this).showErrorMessage(getString(R.string.error),
+                                            getString(R.string.invalid_email_and_password));
 
                                 }else {
                                     // save id and go to home
