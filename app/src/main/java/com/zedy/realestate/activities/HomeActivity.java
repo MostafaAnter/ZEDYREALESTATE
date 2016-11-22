@@ -300,6 +300,7 @@ public class HomeActivity extends LocalizationActivity
                                     createSection(task);
                                 }
                             }else {
+                                sectionedExpandableLayoutHelper.removeAllSection();
                                 noDataView.setVisibility(View.VISIBLE);
                             }
                             onRefreshComplete();

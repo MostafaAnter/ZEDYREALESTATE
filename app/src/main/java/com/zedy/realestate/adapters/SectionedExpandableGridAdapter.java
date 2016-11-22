@@ -274,7 +274,8 @@ public class SectionedExpandableGridAdapter extends RecyclerView.Adapter<Section
                             .getPreferenceValue(Constants.userId));
                     params.put("taskId", taskId);
                     if (mLocation != null)
-                        params.put("coordinators", mLocation.getAltitude() + ", " + mLocation.getLongitude());
+                        params.put("coordinators", mLocation.getLatitude() +
+                        "," + mLocation.getLongitude());
 
                     return params;
                 }
