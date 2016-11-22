@@ -23,4 +23,17 @@
     <string name="there_is_no_Inter_net">لايوجد أتصال بالانترنت</string>
     <string name="exit">خروج</string>
     <string name="there_is_no_data">لا يوجد بيانات</string>
+    <string name="are_you_confirm">هل أنتهيت من المهمة؟</string>
+    <string name="cancel">إلغاء</string>
+    <string name="cant_get_location">لا نستطيع الوصول لمكانك</string>
+    <string name="confirm">تأكيد</string>
+    <string name="done">تم!</string>
+    <string name="loading">جارى التحميل...</string>
+    <string name="message_done">تم تسجيل المهمة بنجاح</string>
+    <string name="ok">نعم</string>
+    <string name="open_gps">فتح ال GPS!</string>
+    <string name="time_out">الوقت انتهي!</string>
+    <string name="try_again">حاول مره أخرى!</string>
+    <string name="why_open_gps">يجب ان تقوم بتشغيل ال GPS</string>
+    <string name="yes_open_gps">نعم, قم بالفتح</string>
 </resources>

@@ -23,4 +23,17 @@
     <string name="language_en">English</string>
     <string name="exit">Exit</string>
     <string name="there_is_no_data">There is no data!</string>
+    <string name="open_gps">Open GPS!</string>
+    <string name="why_open_gps">You must open GPS to supmit request</string>
+    <string name="yes_open_gps">Yes, open</string>
+    <string name="time_out">Time out!</string>
+    <string name="cancel">Cancel</string>
+    <string name="cant_get_location">We can\'t get your location</string>
+    <string name="try_again">Try again!</string>
+    <string name="loading">Loading...</string>
+    <string name="confirm">Confirm!</string>
+    <string name="are_you_confirm">Are you confirm finishig task</string>
+    <string name="ok">Ok</string>
+    <string name="done">Done!</string>
+    <string name="message_done">You task done success, plz reload page</string>
 </resources>

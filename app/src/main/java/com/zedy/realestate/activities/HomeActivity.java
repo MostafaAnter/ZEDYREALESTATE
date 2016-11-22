@@ -346,7 +346,8 @@ public class HomeActivity extends LocalizationActivity
         for (int i = 0; i < tasks.length; i++) {
             arrayList.add(new Item(tasks[i], i));
         }
-        sectionedExpandableLayoutHelper.addSection(task.getTitle() + " - " + task.getProject(),
+        sectionedExpandableLayoutHelper.addSection(task.getId(),
+                task.getTitle() + " - " + task.getProject(),
                 task.getDone().equalsIgnoreCase("1"), arrayList);
         sectionedExpandableLayoutHelper.notifyDataSetChanged();
 

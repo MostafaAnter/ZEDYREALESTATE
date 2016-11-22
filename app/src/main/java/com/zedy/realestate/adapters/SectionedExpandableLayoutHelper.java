@@ -50,9 +50,9 @@ public class SectionedExpandableLayoutHelper implements SectionStateChangeListen
         mSectionedExpandableGridAdapter.notifyDataSetChanged();
     }
 
-    public void addSection(String section, boolean sectionTaskIsDone, ArrayList<Item> items) {
+    public void addSection(String id, String section, boolean sectionTaskIsDone, ArrayList<Item> items) {
         Section newSection;
-        mSectionMap.put(section, (newSection = new Section(section, sectionTaskIsDone)));
+        mSectionMap.put(section, (newSection = new Section(id, section, sectionTaskIsDone)));
         mSectionDataMap.put(newSection, items);
     }
 
