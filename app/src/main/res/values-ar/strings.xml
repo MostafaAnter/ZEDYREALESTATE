@@ -29,7 +29,7 @@
     <string name="confirm">تأكيد</string>
     <string name="done">تم!</string>
     <string name="loading">جارى التحميل...</string>
-    <string name="message_done">تم تسجيل المهمة بنجاح</string>
+    <string name="message_done">تمة المهمة بنجاح, أعد تحميل المهام</string>
     <string name="ok">نعم</string>
     <string name="open_gps">فتح ال GPS!</string>
     <string name="time_out">الوقت انتهي!</string>

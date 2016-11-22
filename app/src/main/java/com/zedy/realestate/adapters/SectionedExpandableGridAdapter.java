@@ -67,6 +67,7 @@ public class SectionedExpandableGridAdapter extends RecyclerView.Adapter<Section
 
     // for post done task
     private Location mLocation;
+    private boolean once ;
 
     public SectionedExpandableGridAdapter(Context context, ArrayList<Object> dataArrayList,
                                           final GridLayoutManager gridLayoutManager, ItemClickListener itemClickListener,
@@ -131,6 +132,7 @@ public class SectionedExpandableGridAdapter extends RecyclerView.Adapter<Section
                     @Override
                     public void onClick(View v) {
                         // done
+                        once = true;
                         doneTask(section.getId());
 
                     }
@@ -154,6 +156,7 @@ public class SectionedExpandableGridAdapter extends RecyclerView.Adapter<Section
                     @Override
                     public void onClick(SweetAlertDialog sDialog) {
                         sDialog.cancel();
+                        sDialog.dismissWithAnimation();
                     }
                 })
                 .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
@@ -164,6 +167,7 @@ public class SectionedExpandableGridAdapter extends RecyclerView.Adapter<Section
                         if (!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
                             buildAlertMessageNoGps();
                         } else {
+                            sweetAlertDialog.dismissWithAnimation();
                             getLocation(mContext, taskId);
                         }
                     }
@@ -245,6 +249,7 @@ public class SectionedExpandableGridAdapter extends RecyclerView.Adapter<Section
 
                         @Override
                         public void onResponse(String response) {
+                            Log.d("taskDone", response);
                             sdh.dismissDialog();
                             // show success message
                             new SweetDialogHelper((FragmentActivity) mContext)
@@ -295,10 +300,13 @@ public class SectionedExpandableGridAdapter extends RecyclerView.Adapter<Section
                 @Override
                 public void onLocationFound(Location location) {
                     // Do some stuff
-                    mLocation = location;
-                    sdh.dismissDialog();
-                    setTaskDone(taskId);
-                    stopListening();
+                    if (once) {
+                        mLocation = location;
+                        sdh.dismissDialog();
+                        setTaskDone(taskId);
+                        stopListening();
+                        once = false;
+                    }
                 }
 
                 @Override
