@@ -24,7 +24,6 @@
            android:text=""
            android:maxLines="1"
            android:ellipsize="end"
-           android:textSize="@dimen/section_text_size"
            android:id="@+id/text_section"
            android:layout_weight=".22"/>
 

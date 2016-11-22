@@ -23,11 +23,12 @@ public class Parse {
             for (int i = 0; i < jsonArray.length() ; i++) {
                 JSONObject taskObject = jsonArray.optJSONObject(i);
                 String id = taskObject.optString("id");
+                String project = taskObject.optString("project");
                 String title = taskObject.optString("title");
                 String describtion = taskObject.optString("description");
                 String done = taskObject.optString("done");
 
-                taskList.add(new Task(id, title, describtion, done));
+                taskList.add(new Task(id, project, title, describtion, done));
             }
         } catch (JSONException e) {
             e.printStackTrace();

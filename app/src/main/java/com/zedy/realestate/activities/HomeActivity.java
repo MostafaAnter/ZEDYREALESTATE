@@ -327,6 +327,8 @@ public class HomeActivity extends LocalizationActivity
 
             };
 
+            // disable cache
+            jsonObjReq.setShouldCache(false);
             // Adding request to request queue
             AppController.getInstance().addToRequestQueue(jsonObjReq);
         } else {
@@ -344,7 +346,7 @@ public class HomeActivity extends LocalizationActivity
         for (int i = 0; i < tasks.length; i++) {
             arrayList.add(new Item(tasks[i], i));
         }
-        sectionedExpandableLayoutHelper.addSection(task.getTitle(),
+        sectionedExpandableLayoutHelper.addSection(task.getTitle() + " - " + task.getProject(),
                 task.getDone().equalsIgnoreCase("1"), arrayList);
         sectionedExpandableLayoutHelper.notifyDataSetChanged();
 
