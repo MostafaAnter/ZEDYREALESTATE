@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingRight="@dimen/activity_horizontal_margin"
-            android:background="#d1d4f5"
+            android:background="@color/background"
             android:paddingLeft="@dimen/activity_horizontal_margin"
             android:scrollbars="vertical" />
 
