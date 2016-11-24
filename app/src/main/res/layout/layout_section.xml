@@ -33,8 +33,8 @@
            android:layout_width="match_parent"
            android:layout_height="match_parent"
            android:layout_weight=".83"
-           android:padding="3dp"
-           android:src="@drawable/ic_check_black_24dp"/>
+           android:padding="4dp"
+           android:src="@drawable/like"/>
 
        <ToggleButton
            android:layout_width="match_parent"
