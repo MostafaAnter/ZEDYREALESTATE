@@ -16,8 +16,8 @@ android {
         applicationId "com.zedy.realestate"
         minSdkVersion 15
         targetSdkVersion 22
-        versionCode 4
-        versionName "2.2"
+        versionCode 5
+        versionName "2.5"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -64,4 +64,7 @@ dependencies {
     compile 'com.github.quentin7b:android-location-tracker:3.2'
     // event bus
     compile 'org.greenrobot:eventbus:3.0.0'
+    // for FCM
+    compile 'com.google.firebase:firebase-messaging:9.8.0'
 }
+apply plugin: 'com.google.gms.google-services'

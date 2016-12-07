@@ -32,6 +32,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.zedy.realestate.BuildConfig;
 import com.zedy.realestate.R;
 import com.zedy.realestate.adapters.ItemClickListener;
@@ -105,6 +106,8 @@ public class HomeActivity extends LocalizationActivity
                 mRecyclerView, this, 1);
 
         noDataView.setVisibility(View.VISIBLE);
+
+        updateToken();
     }
 
     private void initSwipeToRefresh() {
@@ -341,6 +344,47 @@ public class HomeActivity extends LocalizationActivity
             onRefreshComplete();
             new SweetDialogHelper(this).showErrorMessage(getString(R.string.error),
                     getString(R.string.there_is_no_Inter_net));
+        }
+
+    }
+
+    private void updateToken() {
+        if (Utils.isOnline(this)) {
+            String url = "http://real-estate.z-edy.com/api/engineer/token";
+            StringRequest jsonObjReq = new StringRequest(Request.Method.POST,
+                    url,
+                    new Response.Listener<String>() {
+
+                        @Override
+                        public void onResponse(String response) {
+                            Log.d(TAG, response.toString());
+
+                        }
+                    }, new Response.ErrorListener() {
+
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    VolleyLog.d(TAG, "Error: " + error.getMessage());
+                }
+            }) {
+
+                @Override
+                protected Map<String, String> getParams() {
+                    Map<String, String> params = new HashMap<String, String>();
+                    params.put("token", Constants.token);
+                    params.put("engId", new RealEstatePrefStore(HomeActivity.this)
+                            .getPreferenceValue(Constants.userId));
+                    params.put("engToken", FirebaseInstanceId.getInstance().getToken());
+
+                    return params;
+                }
+
+            };
+
+            // disable cache
+            jsonObjReq.setShouldCache(false);
+            // Adding request to request queue
+            AppController.getInstance().addToRequestQueue(jsonObjReq);
         }
 
     }
